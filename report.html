@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Disaster</title>
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin: 10px 0 5px;
+            color: #BBB;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        input, textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            padding: 12px;
+            color: white;
+            font-size: 14px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        input:focus, textarea:focus {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background: white;
+            color: black;
+            font-weight: bold;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background: #CCC;
+        }
+
+        .message {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #0f0;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Report a Disaster</h2>
+        <form onsubmit="return showMessage()" action="mailto:disastermanagement.forhelp@gmail.com" method="post" enctype="text/plain">
+            <label for="disaster">Disaster Type</label>
+            <input type="text" name="disaster" id="disaster" placeholder="e.g., Flood, Earthquake" required>
+
+            <label for="location">Location</label>
+            <input type="text" name="location" id="location" placeholder="City or Area" required>
+
+            <label for="description">Description</label>
+            <textarea name="description" id="description" placeholder="Describe the situation..." required></textarea>
+
+            <input type="submit" value="Submit Report">
+        </form>
+        <div class="message" id="confirmation">✅ Report has been submitted successfully!</div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('confirmation').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('confirmation').style.display = 'none';
+            }, 3000);
+            return true;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: #444;
+            padding: 15px;
+        }
+
+        nav a {
+            background: #001F3F;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #cc3700;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #ff4500;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        li:hover {
+            background: #cc3700;
+        }
+
+        .info {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>Emergency Contacts</header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="report.html">Report Disaster</a>
+        <a href="contacts.html">Emergency Contacts</a>
+        <a href="about.html">About Us</a>
+    </nav>
+
+    <section class="container">
+        <h2>Important Emergency Numbers</h2>
+        <ul>
+            <li><a href="https://www.tnfrs.tn.gov.in/contact/" target="_blank"><strong>Fire Department:</strong> 101</a></li>
+            <li><a href="https://tnsdma.tn.gov.in/" target="_blank"><strong>Disaster Helpline:</strong> 102</a></li>
+            <li><a href="https://eservices.tnpolice.gov.in/CCTNSNICSDC/Index?35" target="_blank"><strong>Police:</strong> 100</a></li>
+            <li><a href="https://tnhsp.org/tnhsp/108-emergency-ambulance-services.php" target="_blank"><strong>Ambulance:</strong> 108</a></li>
+        </ul>
+        <p class="info">Tap a number to call instantly in case of an emergency. Quick response can save lives.</p>
+    </section>
+</body>
+</html>
